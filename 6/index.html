@@ -1,0 +1,49 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>web</title><style type=text/css>body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,table{
+    		margin:0;padding: 0
+    	}
+    	img,input{
+    		border:none;
+    	}
+    	a{
+    		text-decoration:none;
+    	}
+    	ul,ol,li{
+    		list-style:none;
+    	}
+    	header,footer,section,article,aside,nav{
+    		display:block;
+    	}
+    	.clearfix:after{
+    		content:'200B;';
+    		display:block;
+    		height:0;
+    		font-size:0;
+    		clear:both;
+    	}
+    	.flexSpaceAround{
+    		display:-webkit-flex;
+    		display:-moz-flex;
+    		display:flex;
+    		flex-wrap:wrap;
+    		justify-content: space-around;
+    	}
+        .flexStart{
+            display:-webkit-flex;
+            display:-moz-flex;
+            display:flex;
+            flex-wrap:wrap;
+            justify-content: flex-start;
+        }</style><link href=./static/css/app.d1e6307828297854bbf8e625c55e5a2e.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=./static/js/manifest.3ad1d5771e9b13dbdad2.js></script><script type=text/javascript src=./static/js/vendor.7accf46164f82444f986.js></script><script type=text/javascript src=./static/js/app.2633820119bcf8f08833.js></script></body></html><script type=text/javascript>//手机端的适配页面，尺寸一苹果6的尺寸320，为样板
+	(function (doc, win) {
+		var docEl = doc.documentElement,
+			resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+			recalc = function () {
+				var clientWidth = docEl.clientWidth;
+				if (!clientWidth) return;
+				docEl.style.fontSize = 100 * (clientWidth / 320) + 'px';
+			};
+		if (!doc.addEventListener) return;
+		win.addEventListener(resizeEvt, recalc, false);
+		doc.addEventListener('DOMContentLoaded', recalc, false);
+		//$("#invitationCode").text(getUrlParam("invitationcode"));
+	})(document, window);</script>
